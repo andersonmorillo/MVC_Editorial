@@ -15,7 +15,7 @@ class Person(object):
         """
         self._id_person = id_person
         self._name = name
-        sefl._last_name = last_name
+        self._last_name = last_name
 
     @property
     def id_person(self) -> int:
