@@ -2,14 +2,12 @@ from person import Person
 from datetime import date
 
 
-
-
 class Book(Person):
     """
     class used to represent the book
     """
 
-    def __init__(self, title: str, id_person: int, name: str, last_name:str, post_date: date, id_book: int, edition: int, no_page: int):
+    def __init__(self, title: str, id_person: int, name: str, last_name:str, post_date: str, id_book: int, edition: int, no_page: int):
         """book constructor object
         
         :param title: Book's tittle
@@ -25,8 +23,9 @@ class Book(Person):
         :param no_page: The number of pages in the book
         :type: int
         """
-        self._title = title
         Person.__init__(self, id_person, name, last_name)
+
+        self._title = title
         self._post_date = post_date
         self._id_book = id_book
         self._edition = edition

@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
-from datetime import date
 from logic.book import Book
-from logic.person import Person
+
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -30,7 +29,7 @@ def book_detail():
     edition = request.form['edition']
     no_page = request.form['no_page']
 
-    p = Book(title=title,  id_person=id_person, name=first_name, last_name=last_name, post_date= date.today(), id_book=id_book, edition=edition, no_page=no_page)
+    p = Book(title=title,  id_person=id_person, name=first_name, last_name=last_name, post_date= post_date, id_book=id_book, edition=edition, no_page=no_page)
     model.append(p)
     return render_template('book_detail.html', value=p)
 
