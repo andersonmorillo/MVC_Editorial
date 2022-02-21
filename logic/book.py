@@ -1,5 +1,4 @@
-from person import Person
-from datetime import date
+from logic.person import Person
 
 
 class Book(Person):
