@@ -1,7 +1,7 @@
 from person import Person
 from datetime import date
 
-person = Person
+
 
 
 class Book(Person):
@@ -9,7 +9,7 @@ class Book(Person):
     class used to represent the book
     """
 
-    def __init__(self, title: str, id: int, name: str, last_name:str, post_date: date.today(), id_book: int, edition: int, no_page: int):
+    def __init__(self, title: str, id_person: int, name: str, last_name:str, post_date: date, id_book: int, edition: int, no_page: int):
         """book constructor object
         
         :param title: Book's tittle
@@ -26,7 +26,7 @@ class Book(Person):
         :type: int
         """
         self._title = title
-        Person.__init__(self, id, name, last_name)
+        Person.__init__(self, id_person, name, last_name)
         self._post_date = post_date
         self._id_book = id_book
         self._edition = edition
@@ -120,10 +120,11 @@ class Book(Person):
         :rtype: str
         """
 
-        return '({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})'.format(self._id_book, self._title, self._id_person, self._name, self._last_name, self._post_date, self._edition, self._no_page)
+        return '({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})'.format( self._title, self._id_person, self._name, self._last_name, self._post_date, self.id_book, self._edition,  self._no_page)
 
 
 if __name__ == '__main__':
     edwin = Person(73577376, "Edwin", "Puertas")
     name = Book("elprincipe",73577376, "Edwin", "Puertas",date.today(),213214,3,321)
     print(name)
+    print(edwin)
