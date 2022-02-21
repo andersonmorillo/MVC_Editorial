@@ -34,7 +34,7 @@ def book_detail():
 
 
 
-@app.route('/books')
+@app.route('/books', methods=['POST'])
 def books():
     data = [(i.title, i.id_person, i.name, i.last_name, i.post_date, i.id_book, i.edition, i.no_page) for i in model]
     print(data)
