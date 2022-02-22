@@ -15,7 +15,7 @@
         <th scope="col">post date</th>
         <th scope="col">id book</th>
         <th scope="col">edition</th>
-        <th scope="col">no page</th>
+
         <th scope="col">Edit | Delete</th>
     </tr>
   </thead>
@@ -30,13 +30,13 @@
         <td>{{line[5]}}</td>
         <td>{{line[6]}}</td>
         <td>{{line[7]}}</td>
-        <tb>
-            <a href="/person_update/{{line[5]}}" class="btn btn-warning btn-xs">Edit</a>
-            <a href="/person_delete/{{line[5]}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
-        </tb>
+        <td>
+            <a href="/person_update/{{line[0]}}" class="btn btn-warning btn-xs">Edit</a>
+            <a href="/person_delete/{{line[0]}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+        </td>
     </tr>
 
     {% endfor %}
   </tbody>
 </table>
-{% endlock %}
+{% endblock %}

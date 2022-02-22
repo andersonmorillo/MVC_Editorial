@@ -6,40 +6,40 @@
     <h1>Book Form</h1>
     <p>Book's information   </p>
         <br>
-            <form action="/books" method="post">
+            <form action="/book_detail" method="post">
                 <input type="hidden" id="op" name="op" value="I">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_title">title</span>
-                    <input type="text" class="form-control" name="id_title" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_title">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_id_person">author id</span>
-                    <input type="number" class="form-control" name="id_person" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <input type="number" class="form-control" name="id_person" aria-label="Sizing example input" aria-describedby="inputGroup_id_person">
                 </div>
                    <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup_first_name">Author name</span>
-                    <input type="text" class="form-control" name="first_name" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <span class="input-group-text" id="inputGroup_name">Author name</span>
+                    <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup_name">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_last_name">Author last name</span>
-                    <input type="text" class="form-control" name="last_name" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <input type="text" class="form-control" name="last_name" aria-label="Sizing example input" aria-describedby="inputGroup_last_name">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_post_date">Post date</span>
-                    <input type="date" class="form-control" name="post_date" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <input type="date" class="form-control" name="post_date" aria-label="Sizing example input" aria-describedby="inputGroup_post_date">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_id_book">Book's id</span>
-                    <input type="number" class="form-control" name="id_book" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                    <input type="number" class="form-control" name="id_book" aria-label="Sizing example input" aria-describedby="inputGroup_id_book">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_edition">Edition</span>
-                    <input type="number" class="form-control" name="edition" aria-label="Sizing example input" aria-describedby="inputGroup_name">
+                    <input type="number" class="form-control" name="edition" aria-label="Sizing example input" aria-describedby="inputGroup_edition">
                 </div>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup_no_page<">No page</span>
-                    <input type="number" class="form-control" name="no_page" aria-label="Sizing example input" aria-describedby="inputGroup_lastName">
+                    <input type="number" class="form-control" name="no_page" aria-label="Sizing example input" aria-describedby="inputGroup_no_page">
                 </div>
                 <br >
                 <input class="btn btn-primary" type="submit" name="form" value="Submit" />
