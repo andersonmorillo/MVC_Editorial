@@ -33,7 +33,13 @@ def book_detail():
 
     return render_template('book_detail.html', value=p)
 
-
+@app.route("/delete/<id_book>")
+def delete(id_book):
+    for i in model:
+        if i.id_book == id_book:
+            temp = i
+            model.remove(i)
+    return render_template("/delete.html", value=id_book)
 
 @app.route('/books')
 def books():
@@ -41,6 +47,10 @@ def books():
     data = [(i.title, i.id_person, i.name, i.last_name, i.post_date, i.id_book, i.edition, i.no_page) for i in model]
     return render_template('books.html', value=data)
 
+@app.route('/update/<id_book>')
+def update():
+    return render_template('update.html')
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, port=4000)

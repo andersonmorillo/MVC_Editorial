@@ -6,7 +6,7 @@ class Book(Person):
     class used to represent the book
     """
 
-    def __init__(self, title: str, id_person: int , name: str, last_name:str, post_date: date, id_book: int, edition: int, no_page: int):
+    def __init__(self, title: str, id_person: int , name: str, last_name:str, post_date: date, id_book: int = 0, edition: int =0, no_page: int =0):
         """book constructor object
         
         :param title: Book's tittle
